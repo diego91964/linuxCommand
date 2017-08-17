@@ -46,8 +46,11 @@ cat exemplos/awk/ips | awk '{sub(substr($2,1,3),"193"); print $0}'
 ### Extra e tutorial
 
 [Tutorial](http://rberaldo.com.br/tutorial-awk/)
+
 [Ebook](https://www.amazon.com.br/gp/product/B004D4Y302/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B004D4Y302&linkCode=as2&tag=blodober-20)
+
 [Manual GNU](https://www.gnu.org/software/gawk/manual/gawk.html)
+
 [Manual](https://linux.die.net/man/1/awk)
 
 ## Comando at
