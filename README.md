@@ -1,12 +1,12 @@
 
-## adduser (root)
+# Comando adduser (root)
 Cria novo usuário
 
 ```
 adduser teste
 ```
 
-## awk
+# Comando awk
 
 Comando utilizado para criação de filtros de busca.
 
@@ -53,7 +53,7 @@ cat exemplos/awk/ips | awk '{sub(substr($2,1,3),"193"); print $0}'
 
 [Manual](https://linux.die.net/man/1/awk)
 
-## Comando at
+# Comando at
 
 O comando at é utilizado para gerenciar tarefas, para utilizá-lo você deve
 iniciar o agendador com o horário que deseja que a tarefa seja executada.
