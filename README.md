@@ -6,61 +6,57 @@ Cria novo usuário
 adduser teste
 ```
 
-awk:
-at
-bc
-cal
-calendar
-cancel
-cat
-cd
-chgrp
-chmod
-chown
-cmask
-cmp
-comm
-compress
-cp
-cpio
-cron
-cu
-cut
-date
-dd
-df
-diff
-du
-echo
-emacs
-env
-ex
-eqn
-find
-finger
-fork
-fsck
-ftp
-grep
-gzip
-head
-history
-info
-join
-kill
-less
-ln
-login
-lp
-lpc
-lprm
-lpstat
-lpq
-ls
-mail
-mailx
-man
-mesg
-mkdir
-mm
-more
+## awk
+
+Comando utilizado para criação de filtros de busca.
+
+### Busca apenas a coluna 2 (coluna de ips)
+
+```
+cat exemplos/awk/ips | awk '{print $2}'
+
+```
+
+### Busca apenas faixa de ip (último número da coluna 2)
+
+```
+cat exemplos/awk/ips | awk -F ":" '{print substr($2,12)}'
+
+```
+
+### Busca apenas primeiro número do ip
+
+```
+cat exemplos/awk/ips | awk -F ":" '{print substr($2,1,4)}'
+
+```
+
+### Busca ips entre 2 e 5
+
+cat exemplos/awk/ips | awk -F ":" '{if ((substr($2,12)) >= "2" && (substr($2,12)) <= "5" ) print}'
+
+
+### Busca ips 192 e substitui para 192
+
+cat exemplos/awk/ips | awk '{sub(substr($2,1,3),"193"); print $0}'
+
+
+### Extra e tutorial
+
+[Tutorial](http://rberaldo.com.br/tutorial-awk/)
+[Ebook](https://www.amazon.com.br/gp/product/B004D4Y302/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B004D4Y302&linkCode=as2&tag=blodober-20)
+
+## Comando at
+
+O comando at é utilizado para gerenciar tarefas, para utilizá-lo você deve
+iniciar o agendador com o horário que deseja que a tarefa seja executada.
+
+```
+at 11am today
+
+```
+
+```
+echo olá > exemplos/at/testeat
+
+```
