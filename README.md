@@ -53,6 +53,11 @@ cat exemplos/awk/ips | awk '{sub(substr($2,1,3),"193"); print $0}'
 O comando at é utilizado para gerenciar tarefas, para utilizá-lo você deve
 iniciar o agendador com o horário que deseja que a tarefa seja executada.
 
+
+### Cria arquivo de teste com o texto olá
+
+Executa comando hoje as 11:00 AM
+
 ```
 at 11am today
 
@@ -60,5 +65,19 @@ at 11am today
 
 ```
 echo olá > exemplos/at/testeat
+
+```
+
+### Substitui ips 192 por 193 do arquivo exemplo e cria arquivo resultado
+
+Executa comando hoje as 11:02 AM
+
+```
+at 11:02am today
+
+```
+
+```
+cat exemplos/at/exemplo | awk '{sub(substr($2,1,3),"193"); print $0}' > exemplos/at/resultado
 
 ```
