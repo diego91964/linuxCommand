@@ -33,13 +33,15 @@ cat exemplos/awk/ips | awk -F ":" '{print substr($2,1,4)}'
 
 ### Busca ips entre 2 e 5
 
+```
 cat exemplos/awk/ips | awk -F ":" '{if ((substr($2,12)) >= "2" && (substr($2,12)) <= "5" ) print}'
-
+```
 
 ### Busca ips 192 e substitui para 192
 
+```
 cat exemplos/awk/ips | awk '{sub(substr($2,1,3),"193"); print $0}'
-
+```
 
 ### Extra e tutorial
 
