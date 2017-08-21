@@ -1,10 +1,21 @@
 
 # Comando adduser (root)
-Cria novo usuário
+
 
 ```
 adduser teste
+
 ```
+
+Cria novo usuário sem o diretório home
+
+```
+useradd -m -d /home/userTeste userTeste
+
+```
+
+Cria novo usuário com o diretório home
+
 
 # Comando awk
 
@@ -84,5 +95,65 @@ at 11:02am today
 
 ```
 cat exemplos/at/exemplo | awk '{sub(substr($2,1,3),"193"); print $0}' > exemplos/at/resultado
+
+```
+
+```
+^D (Control D)
+
+```
+
+```
+O resultado deverá ser o seguinte:
+
+warning: commands will be executed using /bin/sh
+at> cat exemplos/at/exemplo | awk '{sub(substr($2,1,3),"193"); print $0}' > exemplos/at/resultado
+at> <EOT>
+job 5 at Fri Aug 18 11:02:00 2017
+```
+
+## Comando cal
+
+O comando cal é utilizado para mostrar o calendário no terminal
+
+Exibe o calendário de agosto de 2017.
+
+```
+cal 08 2017
+
+```
+Ex. de Resposta
+
+```
+August 2017       
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30 31
+```
+
+Exibe o calendário do ano corrente
+
+```
+cal -y
+
+```
+
+
+Exibe o calendário do ano 2000
+
+```
+cal -y 2000
+
+```
+
+# Comando calendar
+
+Exibe a lista de eventos do mês corrente.
+
+```
+calendar
 
 ```
