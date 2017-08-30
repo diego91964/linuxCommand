@@ -157,3 +157,52 @@ Exibe a lista de eventos do mês corrente.
 calendar
 
 ```
+
+# Comando cat
+
+O comando cat pode ser utilizado para concatenar ou printar arquivos no terminal.
+
+
+## Print simples
+
+```
+
+cat exemplos/cat/exemplo1.txt
+
+```
+
+Apenas imprime o conteúdo do arquivo na tela.
+
+
+## Print com número de linhas
+
+```
+cat -n exemplos/cat/exemplo1.txt
+
+```
+
+Imprime conteúdo do arquivo com numeração das linhas
+
+
+## Concatenar dois arquivos
+
+```
+
+cat exemplos/cat/*.txt
+
+```
+
+Imprime todos os arquivos que possuem .txt como sufixo.
+
+
+## Imprimir um arquivo em outro
+
+
+```
+
+cat exemplos/cat/exemplo1.txt > teste
+
+
+```
+
+Imprime o conteúdo do arquivo exemplo1.txt no arquivo teste
