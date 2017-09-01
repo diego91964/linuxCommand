@@ -44,7 +44,18 @@ $ groupadd grupo2
 $ useradd -g grupo1 -G grupo2 -s /bin/bash -p usuarioTeste -d/home/usuarioTeste -m usuarioTeste
 
 ```
+Para verificar se o usuário que você criou está realmente cadastrado execute:
 
+```
+cat /etc/passwd | grep usuarioTeste
+```
+
+```
+Resultado usuarioTeste:x:1001:1003::/home/usuarioTeste:/bin/bash
+
+```
+
+Caso o comando seja executado sem o grep, todos os usuários serão listados.
 
 ## Alterar usuários
 
@@ -58,7 +69,7 @@ $ usermod usuarioTeste -g grupo
 Para verificar os grupos que o usuário pertence execute o seguinte comando:
 
 ```
-$ groups usuarioTeste
+$ groups ```
 
 ```
 
@@ -76,10 +87,33 @@ $ groups usuarioTeste
 * -G Adicionar usuário em um grupo (demais grupos)
 
 
+## Remover usuário
+
+O comando para remover o usuário é mais simples
+
+```
+$ userdel usuarioTeste
+
+```
+
+Caso você tenha realizado testes com o usuário, a seguinte mensagem pode aparecer:
+
+```
+$ userdel: user usuarioTeste is currently used by process 15977
+```
+
+Então, é necessário matar o processo executando o seguinte comando:
+
+```
+
+$ kill -9 159777
+
+```
 
 
+# Manipulação de dados
 
-# Comando awk
+## Comando awk
 
 Comando utilizado para criação de filtros de busca.
 
