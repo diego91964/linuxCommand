@@ -1,5 +1,8 @@
+# Administração de usuários
 
-# Comando adduser (root)
+## Adicionar Usuário
+
+### Comando adduser (root)
 
 
 ```
@@ -9,12 +12,71 @@ adduser teste
 
 Cria novo usuário sem o diretório home
 
+
 ```
 useradd -m -d /home/userTeste userTeste
 
 ```
 
 Cria novo usuário com o diretório home
+
+
+Além disso é possível utilizar outras opções:
+
+* -d Apontar qual é o diretório home será utilizado para este usuário
+
+* -s Qual será o programa de inicialização do usuário, normalmente se usa o shell
+
+* -p Para cadastrar uma senha.
+
+* -m Criar um diretório home
+
+* -g Adicionar usuário em um grupo (primário)
+
+* -G Adicionar usuário em um grupo (demais grupos)
+
+
+```
+
+$ groupadd grupo
+$ groupadd grupo1
+$ groupadd grupo2
+$ useradd -g grupo1 -G grupo2 -s /bin/bash -p usuarioTeste -d/home/usuarioTeste -m usuarioTeste
+
+```
+
+
+## Alterar usuários
+
+O comando usermod é utilizado para modificar um usuário
+
+```
+$ usermod usuarioTeste -g grupo
+
+```
+
+Para verificar os grupos que o usuário pertence execute o seguinte comando:
+
+```
+$ groups usuarioTeste
+
+```
+
+
+* -d Apontar qual é o diretório home será utilizado para este usuário
+
+* -s Qual será o programa de inicialização do usuário, normalmente se usa o shell
+
+* -p Para cadastrar uma senha.
+
+* -m Criar um diretório home
+
+* -g Adicionar usuário em um grupo (primário)
+
+* -G Adicionar usuário em um grupo (demais grupos)
+
+
+
 
 
 # Comando awk
