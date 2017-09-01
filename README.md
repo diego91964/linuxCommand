@@ -69,7 +69,7 @@ $ usermod usuarioTeste -g grupo
 Para verificar os grupos que o usuário pertence execute o seguinte comando:
 
 ```
-$ groups ```
+$ groups usuarioTeste
 
 ```
 
