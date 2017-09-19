@@ -1,5 +1,8 @@
+# Administração de usuários
 
-# Comando adduser (root)
+## Adicionar Usuário
+
+### Comando adduser (root)
 
 
 ```
@@ -9,6 +12,7 @@ adduser teste
 
 Cria novo usuário sem o diretório home
 
+
 ```
 useradd -m -d /home/userTeste userTeste
 
@@ -17,7 +21,99 @@ useradd -m -d /home/userTeste userTeste
 Cria novo usuário com o diretório home
 
 
-# Comando awk
+Além disso é possível utilizar outras opções:
+
+* -d Apontar qual é o diretório home será utilizado para este usuário
+
+* -s Qual será o programa de inicialização do usuário, normalmente se usa o shell
+
+* -p Para cadastrar uma senha.
+
+* -m Criar um diretório home
+
+* -g Adicionar usuário em um grupo (primário)
+
+* -G Adicionar usuário em um grupo (demais grupos)
+
+
+```
+
+$ groupadd grupo
+$ groupadd grupo1
+$ groupadd grupo2
+$ useradd -g grupo1 -G grupo2 -s /bin/bash -p usuarioTeste -d/home/usuarioTeste -m usuarioTeste
+
+```
+Para verificar se o usuário que você criou está realmente cadastrado execute:
+
+```
+cat /etc/passwd | grep usuarioTeste
+```
+
+```
+Resultado usuarioTeste:x:1001:1003::/home/usuarioTeste:/bin/bash
+
+```
+
+Caso o comando seja executado sem o grep, todos os usuários serão listados.
+
+## Alterar usuários
+
+O comando usermod é utilizado para modificar um usuário
+
+```
+$ usermod usuarioTeste -g grupo
+
+```
+
+Para verificar os grupos que o usuário pertence execute o seguinte comando:
+
+```
+$ groups usuarioTeste
+
+```
+
+
+* -d Apontar qual é o diretório home será utilizado para este usuário
+
+* -s Qual será o programa de inicialização do usuário, normalmente se usa o shell
+
+* -p Para cadastrar uma senha.
+
+* -m Criar um diretório home
+
+* -g Adicionar usuário em um grupo (primário)
+
+* -G Adicionar usuário em um grupo (demais grupos)
+
+
+## Remover usuário
+
+O comando para remover o usuário é mais simples
+
+```
+$ userdel usuarioTeste
+
+```
+
+Caso você tenha realizado testes com o usuário, a seguinte mensagem pode aparecer:
+
+```
+$ userdel: user usuarioTeste is currently used by process 15977
+```
+
+Então, é necessário matar o processo executando o seguinte comando:
+
+```
+
+$ kill -9 159777
+
+```
+
+
+# Manipulação de dados
+
+## Comando awk
 
 Comando utilizado para criação de filtros de busca.
 
