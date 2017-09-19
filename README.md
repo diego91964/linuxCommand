@@ -206,3 +206,18 @@ cat exemplos/cat/exemplo1.txt > teste
 ```
 
 Imprime o conteúdo do arquivo exemplo1.txt no arquivo teste
+
+
+# Comando cd
+
+O comando cd é utilizado para abrir um diretório
+
+
+## Exemplo de uso do comando cd
+
+```
+cd exemplos
+
+```
+
+Abre o diretório exemplos.
