@@ -316,4 +316,13 @@ cd exemplos
 
 ```
 
+remove o diretório exemplos.
+
+## Exemplo de uso do comando rmdir
+
+```
+rmdir exemplos
+
+```
+
 Abre o diretório exemplos.
